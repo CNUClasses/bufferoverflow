@@ -10,19 +10,19 @@
 int main(){
 	int valid = 0;
 	
-	//note the proximity of these 2 variable allocations
-	//they are also layed out in memory one after another!
+	//note that these 2 variable allocations
+	//are located in memory next to each other
 	//(use memory view to look at them)
 	char password_fromuser[ 8 ];
 	char password_CORRECT[ 8 ];
 	
 	//the password I am looking for
-	strcpy( password_CORRECT, "START" ); // the correct password
+	strcpy( password_CORRECT, "START" ); 
 	
 	//gets a password from user, expects <=8 chars
-	//if I instead enter 17 or 18 1s, I will 
+	//if I instead enter 17 or 18 1's, I will 
 	//enter 8 1's as password_fromuser 
-	//overwrite password_CORRECT with 8 1's
+	//and overwrite password_CORRECT with 8 1's
 	gets( password_fromuser );
 
 	//look at memory again and see that password_CORRECT is all 1's
